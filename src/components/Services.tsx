@@ -8,6 +8,7 @@ import {
   Users,
   ArrowRight 
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
@@ -15,37 +16,43 @@ const Services = () => {
       icon: Database,
       title: "Data Engineering",
       description: "Modern data pipelines, ETL/ELT processes, and real-time analytics infrastructure to unlock your data's potential.",
-      features: ["Data Pipeline Architecture", "Real-time Processing", "Data Quality & Governance", "Analytics Infrastructure"]
+      features: ["Data Pipeline Architecture", "Real-time Processing", "Data Quality & Governance", "Analytics Infrastructure"],
+      link: "/services/data-engineering"
     },
     {
       icon: Cloud,
       title: "Cloud Transformation", 
       description: "End-to-end cloud migration and optimization across GCP, Azure, and AWS with enterprise security and compliance.",
-      features: ["Cloud Migration Strategy", "Multi-Cloud Architecture", "DevOps & CI/CD", "Cost Optimization"]
+      features: ["Cloud Migration Strategy", "Multi-Cloud Architecture", "DevOps & CI/CD", "Cost Optimization"],
+      link: "/services/cloud-transformation"
     },
     {
       icon: Brain,
       title: "Machine Learning & AI",
       description: "Custom ML models, AI-powered analytics, and intelligent automation to drive business insights and efficiency.",
-      features: ["Predictive Analytics", "MLOps & Model Deployment", "AI Strategy & Consulting", "Automated Decision Systems"]
+      features: ["Predictive Analytics", "MLOps & Model Deployment", "AI Strategy & Consulting", "Automated Decision Systems"],
+      link: "/services/machine-learning"
     },
     {
       icon: Code,
       title: "SaaS Development",
       description: "Scalable, secure SaaS platforms built with modern architectures and enterprise-grade reliability.",
-      features: ["Full-Stack Development", "Microservices Architecture", "API Design & Integration", "Performance Optimization"]
+      features: ["Full-Stack Development", "Microservices Architecture", "API Design & Integration", "Performance Optimization"],
+      link: "/services/saas-development"
     },
     {
       icon: GraduationCap,
       title: "Training & Upskilling",
       description: "Comprehensive training programs to empower your teams with cutting-edge data and cloud technologies.",
-      features: ["Technical Workshops", "Certification Programs", "Hands-on Labs", "Custom Curriculum"]
+      features: ["Technical Workshops", "Certification Programs", "Hands-on Labs", "Custom Curriculum"],
+      link: "/services/training"
     },
     {
       icon: Users,
       title: "Strategic Consulting",
       description: "Expert guidance on digital transformation strategy, technology roadmaps, and organizational change management.",
-      features: ["Digital Strategy", "Technology Roadmaps", "Change Management", "Best Practices Implementation"]
+      features: ["Digital Strategy", "Technology Roadmaps", "Change Management", "Best Practices Implementation"],
+      link: "/services/consulting"
     }
   ];
 
@@ -89,11 +96,14 @@ const Services = () => {
               </div>
               
               <Button 
+                asChild
                 variant="ghost" 
                 className="group/btn text-primary hover:text-primary-foreground hover:bg-primary p-0 h-auto font-medium"
               >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                <Link to={service.link}>
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                </Link>
               </Button>
             </div>
           ))}
@@ -108,9 +118,11 @@ const Services = () => {
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Let's discuss how our expertise can accelerate your data and cloud transformation journey.
             </p>
-            <Button className="btn-hero">
-              Schedule Free Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild className="btn-hero">
+              <Link to="/consultation">
+                Schedule Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
