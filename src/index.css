@@ -245,6 +245,10 @@
   }
 }
 
+@layer utilities {
+  .shadow-enterprise { box-shadow: var(--shadow-enterprise); }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
