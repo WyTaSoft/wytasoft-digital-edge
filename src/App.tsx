@@ -12,6 +12,8 @@ import DataEngineering from "./pages/services/DataEngineering";
 import CloudTransformation from "./pages/services/CloudTransformation";
 import MachineLearning from "./pages/services/MachineLearning";
 import SaaSDevelopment from "./pages/services/SaaSDevelopment";
+import Academy from "./pages/Academy";
+import DataEngineeringFundamentals from "./pages/academy/DataEngineeringFundamentals";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
             <Route path="/services/cloud-transformation" element={<CloudTransformation />} />
             <Route path="/services/machine-learning" element={<MachineLearning />} />
             <Route path="/services/saas-development" element={<SaaSDevelopment />} />
+            <Route path="/academy" element={<Academy />} />
+            <Route path="/academy/data-engineering-fundamentals" element={<DataEngineeringFundamentals />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -29,6 +29,15 @@ export default {
           foreground: "hsl(var(--accent-data-foreground))",
           muted: "hsl(var(--accent-data-muted))",
         },
+        "accent-innovation": {
+          DEFAULT: "hsl(var(--accent-innovation))",
+          foreground: "hsl(var(--accent-innovation-foreground))",
+          muted: "hsl(var(--accent-innovation-muted))",
+        },
+        "accent-success": {
+          DEFAULT: "hsl(var(--accent-success))",
+          foreground: "hsl(var(--accent-success-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

@@ -18,15 +18,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    /* Brand Colors - Professional Blue Palette */
-    --primary: 214 84% 56%;
+    /* Brand Colors - Rich Professional Palette */
+    --primary: 220 90% 56%;
     --primary-foreground: 0 0% 100%;
-    --primary-muted: 214 50% 85%;
+    --primary-muted: 220 65% 88%;
     
-    /* Data/Tech Accent - Teal */
-    --accent-data: 186 77% 47%;
+    /* Data/Tech Accent - Vibrant Teal */
+    --accent-data: 185 84% 45%;
     --accent-data-foreground: 0 0% 100%;
-    --accent-data-muted: 186 45% 85%;
+    --accent-data-muted: 185 65% 85%;
+    
+    /* Innovation Accent - Purple */
+    --accent-innovation: 260 84% 65%;
+    --accent-innovation-foreground: 0 0% 100%;
+    --accent-innovation-muted: 260 65% 90%;
+    
+    /* Success - Enhanced Green */
+    --accent-success: 145 70% 42%;
+    --accent-success-foreground: 0 0% 100%;
 
     /* Enterprise Neutral Palette */
     --secondary: 215 20% 94%;
@@ -50,10 +59,12 @@
     --input: 215 20% 88%;
     --ring: 214 84% 56%;
 
-    /* Enterprise Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 84% 56%), hsl(186 77% 47%));
+    /* Enhanced Enterprise Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 56%), hsl(185 84% 45%));
     --gradient-secondary: linear-gradient(135deg, hsl(215 20% 96%), hsl(215 15% 92%));
-    --gradient-hero: linear-gradient(135deg, hsl(214 84% 56%) 0%, hsl(214 75% 48%) 25%, hsl(186 77% 47%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 90% 56%) 0%, hsl(200 85% 50%) 50%, hsl(185 84% 45%) 100%);
+    --gradient-innovation: linear-gradient(135deg, hsl(260 84% 65%), hsl(220 90% 56%));
+    --gradient-academy: linear-gradient(135deg, hsl(145 70% 42%), hsl(185 84% 45%));
 
     /* Enterprise Shadows */
     --shadow-sm: 0 2px 4px -1px hsl(215 25% 15% / 0.1);
@@ -94,13 +105,19 @@
     --popover: 215 25% 12%;
     --popover-foreground: 215 15% 92%;
 
-    --primary: 214 84% 65%;
+    --primary: 220 90% 65%;
     --primary-foreground: 215 28% 9%;
-    --primary-muted: 214 50% 25%;
+    --primary-muted: 220 65% 25%;
     
-    --accent-data: 186 77% 55%;
+    --accent-data: 185 84% 55%;
     --accent-data-foreground: 215 28% 9%;
-    --accent-data-muted: 186 45% 25%;
+    --accent-data-muted: 185 65% 25%;
+    
+    --accent-innovation: 260 84% 75%;
+    --accent-innovation-foreground: 215 28% 9%;
+    
+    --accent-success: 145 70% 52%;
+    --accent-success-foreground: 215 28% 9%;
 
     --secondary: 215 25% 15%;
     --secondary-foreground: 215 15% 92%;
@@ -121,10 +138,12 @@
     --input: 215 25% 18%;
     --ring: 214 84% 65%;
 
-    /* Dark Mode Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 84% 65%), hsl(186 77% 55%));
+    /* Enhanced Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 65%), hsl(185 84% 55%));
     --gradient-secondary: linear-gradient(135deg, hsl(215 25% 15%), hsl(215 25% 12%));
-    --gradient-hero: linear-gradient(135deg, hsl(214 84% 65%) 0%, hsl(214 75% 58%) 25%, hsl(186 77% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 90% 65%) 0%, hsl(200 85% 60%) 50%, hsl(185 84% 55%) 100%);
+    --gradient-innovation: linear-gradient(135deg, hsl(260 84% 75%), hsl(220 90% 65%));
+    --gradient-academy: linear-gradient(135deg, hsl(145 70% 52%), hsl(185 84% 55%));
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
