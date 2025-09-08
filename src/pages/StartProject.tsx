@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -6,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { useToast } from '@/hooks/use-toast';
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -21,6 +23,17 @@ import {
 } from 'lucide-react';
 
 const StartProject = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    projectType: '',
+    budget: '',
+    description: ''
+  });
+
   const projectTypes = [
     { icon: Database, title: "Data Engineering", description: "Build robust data pipelines and analytics infrastructure" },
     { icon: Cloud, title: "Cloud Migration", description: "Migrate and optimize your cloud infrastructure" },
@@ -35,6 +48,51 @@ const StartProject = () => {
     { icon: Zap, title: "Strategy", description: "Create a tailored roadmap with clear milestones" },
     { icon: CheckCircle, title: "Execution", description: "Deliver high-quality solutions with regular updates" }
   ];
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = () => {
+    // Validate required fields
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.projectType || !formData.description) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields marked with *",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Create email subject and body
+    const subject = `New Project Request from ${formData.firstName} ${formData.lastName}`;
+    const body = `
+Project Request Details:
+
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Company: ${formData.company || 'Not specified'}
+Project Type: ${formData.projectType}
+Budget: ${formData.budget || 'Not specified'}
+
+Project Description:
+${formData.description}
+
+---
+This email was sent from the WyTaSoft website project request form.
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:contact@wytasoft.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+
+    toast({
+      title: "Email Client Opened",
+      description: "Your default email client should now open with the project details pre-filled.",
+    });
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -108,13 +166,21 @@ const StartProject = () => {
                         <label className="text-sm font-medium text-foreground mb-2 block">
                           First Name *
                         </label>
-                        <Input placeholder="John" />
+                        <Input 
+                          placeholder="John" 
+                          value={formData.firstName}
+                          onChange={(e) => handleInputChange('firstName', e.target.value)}
+                        />
                       </div>
                       <div>
                         <label className="text-sm font-medium text-foreground mb-2 block">
                           Last Name *
                         </label>
-                        <Input placeholder="Doe" />
+                        <Input 
+                          placeholder="Doe" 
+                          value={formData.lastName}
+                          onChange={(e) => handleInputChange('lastName', e.target.value)}
+                        />
                       </div>
                     </div>
 
@@ -123,13 +189,22 @@ const StartProject = () => {
                         <label className="text-sm font-medium text-foreground mb-2 block">
                           Email *
                         </label>
-                        <Input type="email" placeholder="john@company.com" />
+                        <Input 
+                          type="email" 
+                          placeholder="john@company.com" 
+                          value={formData.email}
+                          onChange={(e) => handleInputChange('email', e.target.value)}
+                        />
                       </div>
                       <div>
                         <label className="text-sm font-medium text-foreground mb-2 block">
                           Company
                         </label>
-                        <Input placeholder="Your Company" />
+                        <Input 
+                          placeholder="Your Company" 
+                          value={formData.company}
+                          onChange={(e) => handleInputChange('company', e.target.value)}
+                        />
                       </div>
                     </div>
 
@@ -137,7 +212,7 @@ const StartProject = () => {
                       <label className="text-sm font-medium text-foreground mb-2 block">
                         Project Type *
                       </label>
-                      <Select>
+                      <Select value={formData.projectType} onValueChange={(value) => handleInputChange('projectType', value)}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select project type" />
                         </SelectTrigger>
@@ -156,7 +231,7 @@ const StartProject = () => {
                       <label className="text-sm font-medium text-foreground mb-2 block">
                         Project Budget
                       </label>
-                      <Select>
+                      <Select value={formData.budget} onValueChange={(value) => handleInputChange('budget', value)}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select budget range" />
                         </SelectTrigger>
@@ -177,10 +252,12 @@ const StartProject = () => {
                       <Textarea 
                         placeholder="Describe your project goals, challenges, and requirements..."
                         rows={6}
+                        value={formData.description}
+                        onChange={(e) => handleInputChange('description', e.target.value)}
                       />
                     </div>
 
-                    <Button className="btn-hero w-full">
+                    <Button className="btn-hero w-full" onClick={handleSubmit}>
                       Submit Project Request
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
