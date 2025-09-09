@@ -101,11 +101,11 @@ This email was sent from the WyTaSoft website project request form.
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-hero">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto text-white">
-            <h1 className="text-hero mb-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white">
               Start Your Transformation Journey
             </h1>
-            <p className="text-subtitle mb-8">
+            <p className="text-lg md:text-xl leading-relaxed mb-8 text-white/90">
               Tell us about your project and let's build something extraordinary together. 
               Our experts will guide you through every step of the process.
             </p>
@@ -117,8 +117,12 @@ This email was sent from the WyTaSoft website project request form.
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">What Type of Project Are You Planning?</h2>
-            <p className="text-subtitle max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent-data bg-clip-text text-transparent">
+                What Type of Project Are You Planning?
+              </span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Select the area that best matches your needs. We'll customize our approach accordingly.
             </p>
           </div>
@@ -130,8 +134,8 @@ This email was sent from the WyTaSoft website project request form.
                   <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <type.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-lg">{type.title}</CardTitle>
-                  <CardDescription>{type.description}</CardDescription>
+                  <CardTitle className="text-lg text-primary font-semibold">{type.title}</CardTitle>
+                  <CardDescription className="text-muted-foreground">{type.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -144,8 +148,12 @@ This email was sent from the WyTaSoft website project request form.
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-section-title mb-4">Tell Us About Your Project</h2>
-              <p className="text-subtitle">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                <span className="bg-gradient-to-r from-accent-data to-accent-innovation bg-clip-text text-transparent">
+                  Tell Us About Your Project
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 The more details you provide, the better we can tailor our approach to your needs.
               </p>
             </div>
@@ -155,15 +163,15 @@ This email was sent from the WyTaSoft website project request form.
               <div className="lg:col-span-2">
                 <Card className="card-enterprise">
                   <CardHeader>
-                    <CardTitle>Project Details</CardTitle>
-                    <CardDescription>
+                    <CardTitle className="text-xl text-primary font-semibold">Project Details</CardTitle>
+                    <CardDescription className="text-muted-foreground">
                       Fill out the form below and we'll get back to you within 24 hours.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           First Name *
                         </label>
                         <Input 
@@ -173,7 +181,7 @@ This email was sent from the WyTaSoft website project request form.
                         />
                       </div>
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           Last Name *
                         </label>
                         <Input 
@@ -186,7 +194,7 @@ This email was sent from the WyTaSoft website project request form.
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           Email *
                         </label>
                         <Input 
@@ -197,7 +205,7 @@ This email was sent from the WyTaSoft website project request form.
                         />
                       </div>
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           Company
                         </label>
                         <Input 
@@ -209,7 +217,7 @@ This email was sent from the WyTaSoft website project request form.
                     </div>
 
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
+                      <label className="text-sm font-medium text-accent-data mb-2 block">
                         Project Type *
                       </label>
                       <Select value={formData.projectType} onValueChange={(value) => handleInputChange('projectType', value)}>
@@ -228,7 +236,7 @@ This email was sent from the WyTaSoft website project request form.
                     </div>
 
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
+                      <label className="text-sm font-medium text-accent-data mb-2 block">
                         Project Budget
                       </label>
                       <Select value={formData.budget} onValueChange={(value) => handleInputChange('budget', value)}>
@@ -246,7 +254,7 @@ This email was sent from the WyTaSoft website project request form.
                     </div>
 
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
+                      <label className="text-sm font-medium text-accent-data mb-2 block">
                         Project Description *
                       </label>
                       <Textarea 
@@ -269,8 +277,8 @@ This email was sent from the WyTaSoft website project request form.
               <div className="space-y-6">
                 <Card className="card-enterprise">
                   <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <Clock className="h-5 w-5 mr-2 text-primary" />
+                    <CardTitle className="flex items-center text-primary font-semibold">
+                      <Clock className="h-5 w-5 mr-2 text-accent-data" />
                       Our Process
                     </CardTitle>
                   </CardHeader>
@@ -281,7 +289,7 @@ This email was sent from the WyTaSoft website project request form.
                           <step.icon className="h-4 w-4 text-white" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-foreground">{step.title}</h4>
+                          <h4 className="font-semibold text-primary">{step.title}</h4>
                           <p className="text-sm text-muted-foreground">{step.description}</p>
                         </div>
                       </div>
@@ -291,24 +299,24 @@ This email was sent from the WyTaSoft website project request form.
 
                 <Card className="card-enterprise">
                   <CardHeader>
-                    <CardTitle>Why Choose WyTaSoft?</CardTitle>
+                    <CardTitle className="text-primary font-semibold">Why Choose WyTaSoft?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">10+ years of experience</span>
+                      <CheckCircle className="h-4 w-4 text-accent-success" />
+                      <span className="text-sm text-foreground">10+ years of experience</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Enterprise-grade solutions</span>
+                      <CheckCircle className="h-4 w-4 text-accent-success" />
+                      <span className="text-sm text-foreground">Enterprise-grade solutions</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">24/7 support & maintenance</span>
+                      <CheckCircle className="h-4 w-4 text-accent-success" />
+                      <span className="text-sm text-foreground">24/7 support & maintenance</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Certified cloud experts</span>
+                      <CheckCircle className="h-4 w-4 text-accent-success" />
+                      <span className="text-sm text-foreground">Certified cloud experts</span>
                     </div>
                   </CardContent>
                 </Card>
