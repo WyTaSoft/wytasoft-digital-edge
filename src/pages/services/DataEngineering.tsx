@@ -112,7 +112,11 @@ const DataEngineering = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Comprehensive Data Engineering Services</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent-data bg-clip-text text-transparent">
+                Comprehensive Data Engineering Services
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               From data ingestion to analytics, we cover every aspect of your data journey.
             </p>
@@ -125,7 +129,7 @@ const DataEngineering = () => {
                   <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl text-primary font-semibold">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {service.description}
                   </CardDescription>
@@ -140,7 +144,11 @@ const DataEngineering = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Technologies We Master</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-data to-accent-innovation bg-clip-text text-transparent">
+                Technologies We Master
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               We work with the latest and most reliable data engineering technologies.
             </p>
@@ -160,7 +168,11 @@ const DataEngineering = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Why Choose Our Data Engineering?</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-innovation to-primary bg-clip-text text-transparent">
+                Why Choose Our Data Engineering?
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Proven results that drive business value and competitive advantage.
             </p>
@@ -173,7 +185,7 @@ const DataEngineering = () => {
                   <div className="w-16 h-16 bg-gradient-enterprise rounded-lg flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                  <CardTitle className="text-lg text-primary font-semibold">{benefit.title}</CardTitle>
                   <CardDescription>{benefit.description}</CardDescription>
                 </CardHeader>
               </Card>
@@ -186,7 +198,11 @@ const DataEngineering = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Success Stories</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-success to-accent-data bg-clip-text text-transparent">
+                Success Stories
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Real results from our data engineering implementations.
             </p>
@@ -196,19 +212,19 @@ const DataEngineering = () => {
             {caseStudies.map((study, index) => (
               <Card key={index} className="card-enterprise">
                 <CardHeader>
-                  <CardTitle className="text-xl">{study.title}</CardTitle>
+                  <CardTitle className="text-xl text-primary font-semibold">{study.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Challenge</h4>
+                    <h4 className="font-semibold text-accent-data mb-2">Challenge</h4>
                     <p className="text-muted-foreground">{study.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Solution</h4>
+                    <h4 className="font-semibold text-accent-data mb-2">Solution</h4>
                     <p className="text-muted-foreground">{study.solution}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Results</h4>
+                    <h4 className="font-semibold text-accent-data mb-2">Results</h4>
                     <p className="text-primary font-medium">{study.results}</p>
                   </div>
                 </CardContent>

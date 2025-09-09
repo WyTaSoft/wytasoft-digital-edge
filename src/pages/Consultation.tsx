@@ -85,8 +85,12 @@ const Consultation = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Choose Your Consultation Type</h2>
-            <p className="text-subtitle max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent-data bg-clip-text text-transparent">
+                Choose Your Consultation Type
+              </span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Select the consultation format that best fits your current needs and timeline.
             </p>
           </div>
@@ -98,16 +102,16 @@ const Consultation = () => {
                   <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Calendar className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{type.title}</CardTitle>
-                  <CardDescription className="text-primary font-medium">{type.duration}</CardDescription>
+                  <CardTitle className="text-xl text-primary font-semibold">{type.title}</CardTitle>
+                  <CardDescription className="text-accent-data font-medium">{type.duration}</CardDescription>
                   <p className="text-muted-foreground mt-2">{type.description}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {type.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="h-4 w-4 text-accent-success mr-2 flex-shrink-0" />
+                        <span className="text-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -123,8 +127,12 @@ const Consultation = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-section-title mb-4">Book Your Consultation</h2>
-              <p className="text-subtitle">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                <span className="bg-gradient-to-r from-accent-data to-accent-innovation bg-clip-text text-transparent">
+                  Book Your Consultation
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Fill out the form below and we'll contact you within 4 hours to schedule your consultation.
               </p>
             </div>
@@ -134,7 +142,7 @@ const Consultation = () => {
               <div className="lg:col-span-2">
                 <Card className="card-enterprise">
                   <CardHeader>
-                    <CardTitle>Consultation Request</CardTitle>
+                    <CardTitle className="text-xl text-primary font-semibold">Consultation Request</CardTitle>
                     <CardDescription>
                       Tell us about your goals so we can prepare for a productive session.
                     </CardDescription>
@@ -142,13 +150,13 @@ const Consultation = () => {
                   <CardContent className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           First Name *
                         </label>
                         <Input placeholder="John" />
                       </div>
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           Last Name *
                         </label>
                         <Input placeholder="Doe" />
@@ -157,13 +165,13 @@ const Consultation = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           Email *
                         </label>
                         <Input type="email" placeholder="john@company.com" />
                       </div>
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           Phone Number
                         </label>
                         <Input placeholder="+33 1 23 45 67 89" />
@@ -172,13 +180,13 @@ const Consultation = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           Company *
                         </label>
                         <Input placeholder="Your Company Name" />
                       </div>
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">
+                        <label className="text-sm font-medium text-accent-data mb-2 block">
                           Your Role
                         </label>
                         <Select>
@@ -198,7 +206,7 @@ const Consultation = () => {
                     </div>
 
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
+                      <label className="text-sm font-medium text-accent-data mb-2 block">
                         Consultation Type *
                       </label>
                       <Select>
@@ -214,7 +222,7 @@ const Consultation = () => {
                     </div>
 
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
+                      <label className="text-sm font-medium text-accent-data mb-2 block">
                         Primary Challenge/Goal *
                       </label>
                       <Textarea 
@@ -224,7 +232,7 @@ const Consultation = () => {
                     </div>
 
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
+                      <label className="text-sm font-medium text-accent-data mb-2 block">
                         Preferred Time
                       </label>
                       <Select>
@@ -255,7 +263,7 @@ const Consultation = () => {
               <div className="space-y-6">
                 <Card className="card-enterprise">
                   <CardHeader>
-                    <CardTitle>What to Expect</CardTitle>
+                    <CardTitle className="text-lg text-primary font-semibold">What to Expect</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-start space-x-3">
@@ -297,7 +305,7 @@ const Consultation = () => {
                             <benefit.icon className="h-5 w-5 text-white" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-foreground">{benefit.title}</h4>
+                            <h4 className="font-semibold text-primary">{benefit.title}</h4>
                             <p className="text-sm text-muted-foreground">{benefit.description}</p>
                           </div>
                         </div>

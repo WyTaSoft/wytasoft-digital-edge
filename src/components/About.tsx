@@ -22,8 +22,10 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <h2 className="text-section-title mb-6">
-              About WyTaSoft
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+              <span className="bg-gradient-to-r from-primary to-accent-innovation bg-clip-text text-transparent">
+                About WyTaSoft
+              </span>
             </h2>
             <p className="text-subtitle mb-8">
               Founded by Mehdi Tajmouati, WyTaSoft is a specialized consulting firm 
@@ -52,7 +54,7 @@ const About = () => {
                   <Users className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-card-foreground mb-2">
+                  <h3 className="text-xl font-semibold text-primary mb-2">
                     Mehdi Tajmouati
                   </h3>
                   <p className="text-accent-data font-medium mb-2">
@@ -68,7 +70,7 @@ const About = () => {
 
             {/* Company Details */}
             <div className="card-enterprise">
-              <h4 className="text-lg font-semibold text-card-foreground mb-4 flex items-center">
+              <h4 className="text-lg font-semibold text-primary mb-4 flex items-center">
                 <Shield className="h-5 w-5 text-accent-data mr-2" />
                 Company Information
               </h4>
@@ -94,9 +96,9 @@ const About = () => {
 
             {/* Certifications */}
             <div className="card-enterprise">
-              <h4 className="text-lg font-semibold text-card-foreground mb-4 flex items-center">
+              <h4 className="text-lg font-semibold text-primary mb-4 flex items-center">
                 <Award className="h-5 w-5 text-accent-data mr-2" />
-                Certifications & Expertise
+                Certifications &amp; Expertise
               </h4>
               <div className="grid grid-cols-2 gap-3">
                 {certifications.map((cert, index) => (

@@ -10,8 +10,10 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-section-title mb-4">
-            Get in Touch
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+            <span className="bg-gradient-to-r from-accent-data to-accent-innovation bg-clip-text text-transparent">
+              Get in Touch
+            </span>
           </h2>
           <p className="text-subtitle max-w-2xl mx-auto">
             Ready to start your data transformation journey? 
@@ -24,7 +26,7 @@ const Contact = () => {
           <div className="lg:col-span-1 space-y-6">
             <Card className="card-enterprise">
               <CardHeader>
-                <CardTitle className="text-lg flex items-center">
+                <CardTitle className="text-lg flex items-center text-primary font-semibold">
                   <MapPin className="h-5 w-5 text-accent-data mr-2" />
                   Office Location
                 </CardTitle>
@@ -40,7 +42,7 @@ const Contact = () => {
 
             <Card className="card-enterprise">
               <CardHeader>
-                <CardTitle className="text-lg flex items-center">
+                <CardTitle className="text-lg flex items-center text-primary font-semibold">
                   <Mail className="h-5 w-5 text-accent-data mr-2" />
                   Email
                 </CardTitle>
@@ -52,7 +54,7 @@ const Contact = () => {
 
             <Card className="card-enterprise">
               <CardHeader>
-                <CardTitle className="text-lg flex items-center">
+                <CardTitle className="text-lg flex items-center text-primary font-semibold">
                   <Clock className="h-5 w-5 text-accent-data mr-2" />
                   Business Hours
                 </CardTitle>
@@ -68,7 +70,7 @@ const Contact = () => {
 
             <Card className="card-enterprise">
               <CardHeader>
-                <CardTitle className="text-lg flex items-center">
+                <CardTitle className="text-lg flex items-center text-primary font-semibold">
                   <Linkedin className="h-5 w-5 text-accent-data mr-2" />
                   Connect
                 </CardTitle>
@@ -85,7 +87,7 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <Card className="card-enterprise">
               <CardHeader>
-                <CardTitle className="text-xl">Send us a Message</CardTitle>
+                <CardTitle className="text-xl text-primary font-semibold">Send us a Message</CardTitle>
                 <p className="text-muted-foreground">
                   Tell us about your project and we'll get back to you within 24 hours.
                 </p>
@@ -94,7 +96,7 @@ const Contact = () => {
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
+                      <label className="text-sm font-medium text-accent-data mb-2 block">
                         First Name *
                       </label>
                       <Input 
@@ -103,7 +105,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
+                      <label className="text-sm font-medium text-accent-data mb-2 block">
                         Last Name *
                       </label>
                       <Input 
@@ -114,7 +116,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
+                    <label className="text-sm font-medium text-accent-data mb-2 block">
                       Email Address *
                     </label>
                     <Input 
@@ -125,7 +127,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
+                    <label className="text-sm font-medium text-accent-data mb-2 block">
                       Company
                     </label>
                     <Input 
@@ -135,7 +137,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
+                    <label className="text-sm font-medium text-accent-data mb-2 block">
                       Service Interest
                     </label>
                     <select className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground">
@@ -150,7 +152,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
+                    <label className="text-sm font-medium text-accent-data mb-2 block">
                       Project Description *
                     </label>
                     <Textarea 

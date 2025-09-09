@@ -105,7 +105,11 @@ const CloudTransformation = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Complete Cloud Transformation Services</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent-data bg-clip-text text-transparent">
+                Complete Cloud Transformation Services
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               End-to-end cloud services that accelerate your digital transformation.
             </p>
@@ -118,7 +122,7 @@ const CloudTransformation = () => {
                   <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl text-primary font-semibold">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {service.description}
                   </CardDescription>
@@ -133,7 +137,11 @@ const CloudTransformation = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Multi-Cloud Expertise</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-data to-accent-innovation bg-clip-text text-transparent">
+                Multi-Cloud Expertise
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Certified experts across all major cloud platforms to help you choose the best fit.
             </p>
@@ -149,8 +157,8 @@ const CloudTransformation = () => {
                   <div className="space-y-2">
                     {provider.services.map((service, idx) => (
                       <div key={idx} className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        <span className="text-sm">{service}</span>
+                        <CheckCircle className="h-4 w-4 text-accent-success mr-2" />
+                        <span className="text-sm text-foreground">{service}</span>
                       </div>
                     ))}
                   </div>
@@ -165,7 +173,11 @@ const CloudTransformation = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Our Proven Migration Process</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-innovation to-primary bg-clip-text text-transparent">
+                Our Proven Migration Process
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               A structured approach that minimizes risk and ensures successful cloud adoption.
             </p>
@@ -178,7 +190,7 @@ const CloudTransformation = () => {
                   <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mb-4">
                     <span className="text-white font-bold text-lg">{phase.step}</span>
                   </div>
-                  <CardTitle className="text-lg">{phase.title}</CardTitle>
+                  <CardTitle className="text-lg text-primary font-semibold">{phase.title}</CardTitle>
                   <CardDescription>{phase.description}</CardDescription>
                 </CardHeader>
               </Card>
@@ -191,7 +203,11 @@ const CloudTransformation = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Measurable Business Benefits</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-success to-accent-data bg-clip-text text-transparent">
+                Measurable Business Benefits
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Our cloud transformations deliver tangible ROI and competitive advantages.
             </p>
@@ -204,7 +220,7 @@ const CloudTransformation = () => {
                   <div className="w-16 h-16 bg-gradient-enterprise rounded-lg flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                  <CardTitle className="text-lg text-primary font-semibold">{benefit.title}</CardTitle>
                   <CardDescription>{benefit.description}</CardDescription>
                 </CardHeader>
               </Card>
@@ -217,7 +233,11 @@ const CloudTransformation = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Certified Cloud Experts</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent-innovation bg-clip-text text-transparent">
+                Certified Cloud Experts
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Our team holds professional certifications across all major cloud platforms.
             </p>

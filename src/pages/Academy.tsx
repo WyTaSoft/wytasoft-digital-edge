@@ -191,8 +191,10 @@ const Academy = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-section-title mb-4">
-              Professional Training Programs
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent-data bg-clip-text text-transparent">
+                Professional Training Programs
+              </span>
             </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Comprehensive, hands-on programs designed by industry experts to accelerate your career.
@@ -211,7 +213,7 @@ const Academy = () => {
                       <span className="text-sm font-medium">{program.rating}</span>
                     </div>
                   </div>
-                  <CardTitle className="text-xl">{program.title}</CardTitle>
+                  <CardTitle className="text-xl text-primary font-semibold">{program.title}</CardTitle>
                   <CardDescription className="text-base">
                     {program.description}
                   </CardDescription>
@@ -235,7 +237,7 @@ const Academy = () => {
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="font-medium mb-2">Key Modules:</h4>
+                    <h4 className="font-medium text-accent-data mb-2">Key Modules:</h4>
                     <div className="grid grid-cols-2 gap-1">
                       {program.modules.slice(0, 4).map((module, idx) => (
                         <div key={idx} className="flex items-center text-sm text-muted-foreground">
@@ -247,7 +249,7 @@ const Academy = () => {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-medium mb-2">Technologies:</h4>
+                    <h4 className="font-medium text-accent-data mb-2">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
                       {program.skills.map((skill, idx) => (
                         <Badge key={idx} variant="outline" className="text-xs">
@@ -279,8 +281,10 @@ const Academy = () => {
       <section className="py-20 bg-gradient-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-section-title mb-4">
-              Intensive Workshops
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-innovation to-accent-data bg-clip-text text-transparent">
+                Intensive Workshops
+              </span>
             </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Short-format, intensive workshops for professionals looking to master specific technologies.
@@ -291,21 +295,21 @@ const Academy = () => {
             {workshops.map((workshop, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
-                  <CardTitle className="text-lg">{workshop.title}</CardTitle>
+                  <CardTitle className="text-lg text-primary font-semibold">{workshop.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3 mb-6">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Duration:</span>
-                      <span className="font-medium">{workshop.duration}</span>
+                      <span className="font-medium text-foreground">{workshop.duration}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Format:</span>
-                      <span className="font-medium">{workshop.format}</span>
+                      <span className="font-medium text-foreground">{workshop.format}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Next Date:</span>
-                      <span className="font-medium">{workshop.nextDate}</span>
+                      <span className="font-medium text-foreground">{workshop.nextDate}</span>
                     </div>
                   </div>
                   

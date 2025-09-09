@@ -61,8 +61,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-section-title mb-4">
-            Comprehensive Data & Cloud Solutions
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+            <span className="bg-gradient-to-r from-primary to-accent-data bg-clip-text text-transparent">
+              Comprehensive Data &amp; Cloud Solutions
+            </span>
           </h2>
           <p className="text-subtitle max-w-2xl mx-auto">
             From data engineering to cloud transformation, we deliver end-to-end solutions 
@@ -78,7 +80,7 @@ const Services = () => {
                 <div className="w-14 h-14 bg-gradient-enterprise rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                <h3 className="text-xl font-semibold text-primary mb-3">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
@@ -112,8 +114,10 @@ const Services = () => {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-secondary p-8 rounded-2xl border border-border">
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Ready to Transform Your Business?
+            <h3 className="text-2xl font-semibold mb-4">
+              <span className="bg-gradient-to-r from-accent-innovation to-primary bg-clip-text text-transparent">
+                Ready to Transform Your Business?
+              </span>
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Let's discuss how our expertise can accelerate your data and cloud transformation journey.

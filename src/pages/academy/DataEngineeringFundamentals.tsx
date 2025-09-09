@@ -192,7 +192,11 @@ const DataEngineeringFundamentals = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold mb-6">What You'll Learn</h2>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+                <span className="bg-gradient-to-r from-primary to-accent-data bg-clip-text text-transparent">
+                  What You'll Learn
+                </span>
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                 {learningOutcomes.map((outcome, index) => (
                   <div key={index} className="flex items-start">
@@ -203,13 +207,17 @@ const DataEngineeringFundamentals = () => {
               </div>
 
               {/* Curriculum */}
-              <h3 className="text-2xl font-bold mb-6">Course Curriculum</h3>
+              <h3 className="text-2xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-accent-data to-accent-innovation bg-clip-text text-transparent">
+                  Course Curriculum
+                </span>
+              </h3>
               <div className="space-y-4">
                 {curriculum.map((week, index) => (
                   <Card key={index} className="overflow-hidden">
                     <CardHeader className="pb-4">
                       <div className="flex items-center justify-between">
-                        <CardTitle className="text-lg">
+                        <CardTitle className="text-lg text-primary font-semibold">
                           Week {week.week}: {week.title}
                         </CardTitle>
                         <Badge variant="outline">{week.duration}</Badge>
@@ -234,12 +242,12 @@ const DataEngineeringFundamentals = () => {
             <div className="lg:col-span-1">
               <Card className="sticky top-8">
                 <CardHeader>
-                  <CardTitle>Course Information</CardTitle>
+                  <CardTitle className="text-lg text-primary font-semibold">Course Information</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium mb-2">Prerequisites</h4>
+                      <h4 className="font-medium text-accent-data mb-2">Prerequisites</h4>
                       <p className="text-sm text-muted-foreground">
                         Basic programming knowledge (Python recommended), SQL fundamentals, 
                         understanding of databases
@@ -247,7 +255,7 @@ const DataEngineeringFundamentals = () => {
                     </div>
                     
                     <div>
-                      <h4 className="font-medium mb-2">Tools & Technologies</h4>
+                      <h4 className="font-medium text-accent-data mb-2">Tools & Technologies</h4>
                       <div className="flex flex-wrap gap-2">
                         {tools.map((tool, index) => (
                           <Badge key={index} variant="secondary" className="text-xs">
@@ -258,7 +266,7 @@ const DataEngineeringFundamentals = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-medium mb-2">Course Format</h4>
+                      <h4 className="font-medium text-accent-data mb-2">Course Format</h4>
                       <p className="text-sm text-muted-foreground">
                         Online, self-paced with weekly live sessions, hands-on projects, 
                         and peer collaboration
@@ -266,7 +274,7 @@ const DataEngineeringFundamentals = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-medium mb-2">Certification</h4>
+                      <h4 className="font-medium text-accent-data mb-2">Certification</h4>
                       <p className="text-sm text-muted-foreground">
                         Industry-recognized certificate upon successful completion 
                         of all modules and final project
@@ -300,7 +308,11 @@ const DataEngineeringFundamentals = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Expert Instruction</h3>
+              <h3 className="text-2xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-primary to-accent-innovation bg-clip-text text-transparent">
+                  Expert Instruction
+                </span>
+              </h3>
               <p className="text-muted-foreground mb-6">
                 Learn from industry veterans with over 10 years of experience in data engineering 
                 at leading tech companies. Our instructors bring real-world expertise and 
@@ -323,7 +335,11 @@ const DataEngineeringFundamentals = () => {
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold mb-6">Student Support</h3>
+              <h3 className="text-2xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-accent-data to-accent-success bg-clip-text text-transparent">
+                  Student Support
+                </span>
+              </h3>
               <p className="text-muted-foreground mb-6">
                 Join a community of learners with dedicated support channels, 
                 study groups, and career guidance throughout your journey.
@@ -353,7 +369,9 @@ const DataEngineeringFundamentals = () => {
           <div className="text-center max-w-2xl mx-auto">
             <Target className="h-16 w-16 text-primary mx-auto mb-6" />
             <h3 className="text-3xl font-bold mb-4">
-              Ready to Start Your Data Engineering Journey?
+              <span className="bg-gradient-to-r from-accent-innovation to-primary bg-clip-text text-transparent">
+                Ready to Start Your Data Engineering Journey?
+              </span>
             </h3>
             <p className="text-muted-foreground mb-8">
               Join thousands of professionals who have transformed their careers with our comprehensive training program.

@@ -96,7 +96,11 @@ const SaaSDevelopment = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Complete SaaS Development Services</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent-data bg-clip-text text-transparent">
+                Complete SaaS Development Services
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               From concept to launch and beyond, we build SaaS solutions that succeed.
             </p>
@@ -109,7 +113,7 @@ const SaaSDevelopment = () => {
                   <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl text-primary font-semibold">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {service.description}
                   </CardDescription>
@@ -124,7 +128,11 @@ const SaaSDevelopment = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Enterprise SaaS Features</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-data to-accent-innovation bg-clip-text text-transparent">
+                Enterprise SaaS Features
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Built-in capabilities that modern SaaS platforms require for success.
             </p>
@@ -134,8 +142,8 @@ const SaaSDevelopment = () => {
             {features.map((feature, index) => (
               <Card key={index} className="card-enterprise">
                 <CardHeader>
-                  <CardTitle className="text-lg flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <CardTitle className="text-lg flex items-center text-primary font-semibold">
+                    <CheckCircle className="h-5 w-5 text-accent-success mr-2" />
                     {feature.title}
                   </CardTitle>
                   <CardDescription>{feature.description}</CardDescription>
@@ -150,7 +158,11 @@ const SaaSDevelopment = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Modern Technology Stack</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-innovation to-primary bg-clip-text text-transparent">
+                Modern Technology Stack
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               We use proven technologies that ensure scalability, security, and maintainability.
             </p>
@@ -170,7 +182,11 @@ const SaaSDevelopment = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">Our Development Process</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-success to-accent-data bg-clip-text text-transparent">
+                Our Development Process
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Agile methodology ensuring rapid delivery and continuous feedback.
             </p>
@@ -182,7 +198,7 @@ const SaaSDevelopment = () => {
                 <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-lg">1</span>
                 </div>
-                <CardTitle className="text-lg">Discovery</CardTitle>
+                <CardTitle className="text-lg text-primary font-semibold">Discovery</CardTitle>
                 <CardDescription>Requirements gathering and technical planning</CardDescription>
               </CardHeader>
             </Card>
@@ -191,7 +207,7 @@ const SaaSDevelopment = () => {
                 <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-lg">2</span>
                 </div>
-                <CardTitle className="text-lg">Design</CardTitle>
+                <CardTitle className="text-lg text-primary font-semibold">Design</CardTitle>
                 <CardDescription>UX/UI design and system architecture</CardDescription>
               </CardHeader>
             </Card>
@@ -200,7 +216,7 @@ const SaaSDevelopment = () => {
                 <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-lg">3</span>
                 </div>
-                <CardTitle className="text-lg">Development</CardTitle>
+                <CardTitle className="text-lg text-primary font-semibold">Development</CardTitle>
                 <CardDescription>Agile development with regular demos</CardDescription>
               </CardHeader>
             </Card>
@@ -209,7 +225,7 @@ const SaaSDevelopment = () => {
                 <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-lg">4</span>
                 </div>
-                <CardTitle className="text-lg">Launch</CardTitle>
+                <CardTitle className="text-lg text-primary font-semibold">Launch</CardTitle>
                 <CardDescription>Deployment, monitoring, and ongoing support</CardDescription>
               </CardHeader>
             </Card>

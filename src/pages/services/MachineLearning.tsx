@@ -97,7 +97,11 @@ const MachineLearning = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">AI & Machine Learning Services</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent-innovation bg-clip-text text-transparent">
+                AI &amp; Machine Learning Services
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               From predictive analytics to intelligent automation, we deliver AI solutions that drive results.
             </p>
@@ -110,7 +114,7 @@ const MachineLearning = () => {
                   <div className="w-12 h-12 bg-gradient-enterprise rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl text-primary font-semibold">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {service.description}
                   </CardDescription>
@@ -125,7 +129,11 @@ const MachineLearning = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">AI Use Cases We Excel At</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-data to-accent-innovation bg-clip-text text-transparent">
+                AI Use Cases We Excel At
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               Proven AI solutions across industries and business functions.
             </p>
@@ -135,7 +143,7 @@ const MachineLearning = () => {
             {useCases.map((useCase, index) => (
               <Card key={index} className="card-enterprise">
                 <CardHeader>
-                  <CardTitle className="text-lg">{useCase.title}</CardTitle>
+                  <CardTitle className="text-lg text-primary font-semibold">{useCase.title}</CardTitle>
                   <CardDescription>{useCase.description}</CardDescription>
                 </CardHeader>
               </Card>
@@ -148,7 +156,11 @@ const MachineLearning = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-section-title mb-4">AI Technologies & Frameworks</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-accent-innovation to-primary bg-clip-text text-transparent">
+                AI Technologies &amp; Frameworks
+              </span>
+            </h2>
             <p className="text-subtitle max-w-2xl mx-auto">
               We leverage cutting-edge AI tools and platforms for maximum effectiveness.
             </p>
